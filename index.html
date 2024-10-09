@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>INIT - Calculadora de Juros Compostos</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./css/style.css">
+	<meta name="description" content="Calcule facilmente o valor futuro de seus investimentos com nossa calculadora de juros compostos. Simule aportes mensais, taxas de juros e períodos para otimizar seu planejamento financeiro e atingir suas metas.">
+	<meta name="keywords" content="calculadora de juros compostos, simulação de juros compostos, planejamento financeiro, cálculo de investimento, cálculo de aportes mensais, juros compostos online, simulador de investimentos, rendimento de investimento, juros compostos Brasil, investimentos a longo prazo">
+</head>
+<body>
+	<header>
+		<div id="title">
+			<h2>INIT</h2>
+		</div>
+		<div class="sectionsPage">
+			<button class="buttonsStyleRed">Instagram</button>
+		</div>
+	</header>
+	<main>
+		<section class="container">
+			<div class="espaceAds"></div>
+			<div class="areaCalculadora">
+				<div class="topDown">
+					<h3>Calculadora de Juros Compostos</h3>
+				</div>
+				<form class="campos" id="calculadoraForm">
+					<div class="divisoriaParametros">
+						<label for="valorInicial">Valor Inicial</label>
+						<div class="inputParametros">
+							<span>R$</span>
+							<input id="valorInicial" name="valorInicial" class="inputValuesParametros" autocomplete="on" type="number" placeholder="00,00" required>
+						</div>
+					</div>
+					<div class="divisoriaParametros">
+						<label for="valorMensal">Valor Mensal</label>
+						<div class="inputParametros">
+							<span>R$</span>
+							<input id="valorMensal" name="valorMensal" class="inputValuesParametros" type="number" placeholder="00,00" required>
+						</div>
+					</div>
+					<div class="divisoriaParametros">
+						<label for="taxaJuros">Taxa de Juros</label>
+						<div class="inputParametros">
+							<span>%</span>
+							<input id="taxaJuros" name="taxaJuros" class="inputValuesParametros" type="number" placeholder="0.00" step="0.01" required>
+							<select name="taxaMesAno" id="selectMesAnoTaxa">
+								<option value="1">ao Mês</option>
+								<option value="2">ao Ano</option>
+							</select>
+						</div>
+					</div>
+					<div class="divisoriaParametros">
+						<label for="periodo">Período</label>
+						<div class="inputParametros">
+							<input id="periodo" name="periodo" class="inputValuesParametros" type="number" placeholder="00" required>
+							<select name="selectPeriodo" id="selectPeriodoId">
+								<option value="1">Mês</option>
+								<option value="2">Ano</option>
+							</select>
+						</div>
+					</div>
+				</form>
+				<div id="divButtons" class="topDown">
+					<button id="buttonCalcular" class="buttonsStyleRed">Calcular</button>
+					<button id="buttonClear" class="buttonsStyleRed">Limpar</button>
+				</div>
+				<div class="screenResult">
+					<div class="screenTitle">
+						<h3>Resultado</h3>
+					</div>
+					<div class="screenCards">
+						<div class="resultado">
+							<label>Valor Total</label>
+							<p id="idValorTotal">R$ 0,00</p>
+						</div>
+						<div class="resultado">
+							<label>Valor Investido</label>
+							<p id="idValorInvestido">R$ 0,00</p>
+						</div>
+						<div class="resultado">
+							<label>Total de Juros</label>
+							<p id="idTotalJuros">R$ 0,00</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="espaceAds"></div>
+		</section>
+		<section class="container">
+			<div class="texto">
+				<figure class="banner">
+					<img src="./images/jurosCompostos.webp" alt="Ilustração de Juros Compostos">
+					<figcaption>INIT - Juros Compostos</figcaption>
+				</figure>
+				<h3>Por que Utilizar a Calculadora de Juros Compostos?</h3>
+				<p>A calculadora de juros compostos é uma ferramenta essencial para qualquer pessoa interessada em maximizar seus investimentos. Diferente dos juros simples, os juros compostos fazem com que o dinheiro trabalhe a seu favor, gerando ganhos exponenciais ao longo do tempo. Isso acontece porque, além de render sobre o valor investido, os juros compostos rendem também sobre os próprios juros acumulados. Com nossa calculadora, você pode simular facilmente quanto seu dinheiro vai render ao longo do tempo com diferentes valores de aporte, períodos e taxas de juros.</p>
+				
+				<h3>Como Usar a Calculadora de Juros Compostos?</h3>
+				<p>Usar nossa calculadora é muito simples e intuitivo. Siga os passos abaixo:</p>
+				<ul>
+					<li><strong>Informe o Valor Mensal:</strong> Caso vá fazer aportes mensais, insira o valor a ser investido regularmente.</li>
+					<li><strong>Taxa de Juros:</strong> Adicione a taxa de juros esperada (anual ou mensal). Se estiver utilizando uma taxa anual, a calculadora ajustará automaticamente para calcular mensalmente.</li>
+					<li><strong>Período:</strong> Insira a duração do investimento, podendo ser em anos ou meses.</li>
+					<li><strong>Selecione as Opções de Período e Taxa:</strong> Defina se a taxa de juros e o período serão calculados mensal ou anualmente.</li>
+					<li><strong>Calcular:</strong> Após preencher os campos, clique em “Calcular” para visualizar os resultados.</li>
+				</ul>
+				
+				<p>A calculadora irá mostrar:</p>
+				<ul>
+					<li>O montante total acumulado ao final do período.</li>
+					<li>O valor investido (soma dos aportes).</li>
+					<li>Os juros totais gerados durante o período de investimento.</li>
+				</ul>
+				
+				<h3>Exemplo de Uso</h3>
+				<p>Imagine que você deseja investir R$ 10.000,00 com uma contribuição mensal de R$ 500,00 por um período de 5 anos, com uma taxa de juros anual de 6%. Ao utilizar nossa calculadora, você verá:</p>
+				<ul>
+					<li><strong>Montante Final:</strong> Quanto você terá ao final dos 5 anos.</li>
+					<li><strong>Valor Investido:</strong> Soma de todos os valores investidos ao longo do período.</li>
+					<li><strong>Juros Totais:</strong> Quanto foi gerado apenas em juros compostos.</li>
+				</ul>
+				<p>Essa simulação ajudará você a visualizar o impacto dos juros compostos no seu planejamento financeiro e como os aportes regulares podem acelerar o crescimento do seu capital.</p>
+				
+				<h3>Como os Valores São Calculados?</h3>
+				<p>Nossa calculadora utiliza a fórmula dos juros compostos para calcular o valor final do investimento:</p>
+				<pre class="formula">M = P × (1 + r)^t + A × [(1 + r)^t − 1] / r</pre>
+				
+				<p>Onde:</p>
+				<ol>
+					<li><strong>M</strong> é o montante final.</li>
+					<li><strong>P</strong> é o valor inicial investido.</li>
+					<li><strong>r</strong> é a taxa de juros por período.</li>
+					<li><strong>t</strong> é o número total de períodos.</li>
+					<li><strong>A</strong> é o valor dos aportes mensais.</li>
+				</ol>
+				<p>Essa fórmula leva em conta tanto o valor inicial quanto os aportes regulares, calculando o crescimento exponencial de ambos com base nos juros compostos.</p>
+				
+				<h3>Conclusão</h3>
+				<p>Utilizar a nossa calculadora de juros compostos permite que você tome decisões mais embasadas sobre seus investimentos. Ela ajuda a planejar com precisão quanto dinheiro será acumulado ao longo do tempo, ajustando facilmente diferentes variáveis como aportes mensais, taxas de juros e prazos. Compreenda o poder dos juros compostos e comece a planejar seu futuro financeiro agora mesmo!</p>
+			</div>
+		</section>		
+	</main>
+	<footer id="footer">
+		<p>By INIT - Hospedado na Vercel</p>
+	</footer>
+	<script src="./js/calculadoraJurosCompostos.js"></script>
+</body> 
+</html>
