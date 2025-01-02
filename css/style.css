@@ -375,7 +375,7 @@ footer {
 
     img{
         max-width: 90%;
-        height: auto;
+        height: inherit;
     }
 
     .resultado p {
