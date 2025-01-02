@@ -373,6 +373,11 @@ footer {
         font-size: 1em;
     }
 
+    img{
+        max-width: 90%;
+        height: auto;
+    }
+
     .resultado p {
         font-size: 1em;
     }
