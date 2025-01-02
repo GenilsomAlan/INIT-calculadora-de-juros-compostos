@@ -56,6 +56,11 @@ header {
     gap: 10px;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 .buttonsStyleRed {
     padding: 10px 20px;
     border-radius: 4px;
@@ -73,7 +78,15 @@ header {
 }
 
 main {
+    background: var(--background-color);
     padding-top: 80px; /* Espaço para o header fixo */
+}
+
+.buttonsHeader{
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 section.container {
@@ -253,6 +266,7 @@ div.espaceAds {
     font-size: 1em;
     color: var(--light-text-color);
     text-align: justify;
+    text-indent: 40px;
 }
 
 .texto ul, .texto ol {
